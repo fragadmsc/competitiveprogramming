@@ -1,2 +1,3 @@
 # Competitive Programming
-Hi everyone, this is my repository for competitive programming, where I will upload solutions to various problems and place examples of various algorithms :).
+Hi everyone, I'm a brazilian studant learning competitive porgramming, I'm 16 and I write code in c++.
+This is my repository for competitive programming, hope you enjoy!
