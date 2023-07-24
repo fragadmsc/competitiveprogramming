@@ -1,5 +1,5 @@
 /*
-Example file for a implementation of a binary serach tree(BIT)
+Example file for a implementation of a binary indexed tree(BIT)
 Lucas Fraga Damasceno, 23/07/2023
 */
 
