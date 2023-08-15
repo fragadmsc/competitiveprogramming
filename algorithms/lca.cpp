@@ -33,15 +33,13 @@ int lca(int a, int b) {
     }
     if(a==b) return a; //if we continue the program, we will return pai[a], what is wrong
     //now a and b are on the same level
-    int retorno=0;
     for(int i=MAXLOG;i>=0;i++) {//we always try to walk the maximum possible
         if(prox[i][a]!=prox[i][b]) {
             a=prox[i][a];
             b=prox[i][b];
-            retorno+=(1<<i);
         }
     }
-    //the value of retorno is the maximum that we can walk for a and b still be diferent, so we return its father
-    return pai[retorno];
+    //the value of a is the maximum that we can walk for a and b still be diferent, so we return its father
+    return pai[a];
 }
 
