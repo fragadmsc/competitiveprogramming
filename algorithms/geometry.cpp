@@ -18,16 +18,24 @@ typedef long long ll;
 #define sz(x) (int)x.size()
  
 struct point{
-    int x, y;
+    ll x, y;
     void read() {
         cin>>x>>y;
     }
-    int operator -=(point p) {
-        x-=p.x;
-        y-=p.y;
+    void print() {
+        cout<<x<<' '<<y;
     }
-    int operator *(point p) {
+    point operator -(point& p) const {
+        return point{x-p.x, y-p.y};
+    }
+    ll operator *(point p) {
         return x*p.y-y*p.x;
+    }
+    ll triangle(const point& P1, const point& P2) {// negativo ponto p1 a esquerda de thisP2
+        return (P1 - *this) * (P2 - *this);
+    }
+    bool operator <(const point& p) const {
+        return make_pair(x,y) < make_pair(p.x,p.y);
     }
 };
 
