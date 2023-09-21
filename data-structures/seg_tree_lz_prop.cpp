@@ -9,8 +9,8 @@ void unlazy(ll node, ll nodel, ll noder) {
     if(lz[node]==0) return;
     tree[node]+=lz[node];
     if(nodel != noder) {
-        lz[2*node]=lz[node]/2;
-        lz[2*node+1]=lz[node]/2;
+        lz[2*node]+=lz[node]/2;
+        lz[2*node+1]+=lz[node]/2;
     }
     lz[node]=0;
 }
