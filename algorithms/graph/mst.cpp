@@ -20,7 +20,7 @@ void join(int a, int b) {
 }
 
 int mst() {//this function returns the size of the mst
-    int retorno=0;
+    int mst_size=0;
     while(!arestas.empty()) {//this is a greedy algorithm, we try to put always the edge with the smallest value on the graph
         auto atual = arestas.top();
         arestas.pop();
@@ -30,8 +30,8 @@ int mst() {//this function returns the size of the mst
             continue;
         } else {
             join(a,b);
-            retorno+=atual.first;
+            mst_size+=atual.first;
         }
     }
-    return retorno;
+    return mst_size;
 }
