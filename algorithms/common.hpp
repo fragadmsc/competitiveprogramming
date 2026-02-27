@@ -1,3 +1,4 @@
+#pragma once
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -5,23 +6,23 @@
 using namespace std;
 using namespace __gnu_pbds;
     
-typedef long long ll;
-typedef pair<ll, ll> pii;
-typedef pair<pii, ll> ppi;
-typedef pair<ll, pii> pip;
-typedef vector<ll> vl;
-typedef long double ld;
-typedef priority_queue<int, vector<int>, greater<int>>  minqueue;//priority queue com menor no topo 
-    
-typedef tree<
+using ll = long long;
+using pii = pair<ll, ll>;
+using ppi = pair<pii, ll>;
+using pip = pair<ll, pii>;
+using vl = vector<ll>;
+using ld = long double;
+
+template<typename T>
+using minqueue = priority_queue<T, vector<T>, greater<T>>;//priority queue com menor no topo 
+
+using ordered_set = tree<
 pii, 
 null_type, 
 less<pii>,
 rb_tree_tag, 
 tree_order_statistics_node_update
-> ordered_set;
-//#define x real()
-//#define y imag()
+>;
 const long long inf = 1e18 + 10;
     
 #define pb push_back
