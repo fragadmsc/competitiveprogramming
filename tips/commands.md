@@ -1,8 +1,12 @@
+snippets
+    incluir ModInt                          !incmod
+    
+
 agilizar escrita
     scroll                                  ctrl <- ->
     selecionar varias linhas                shift <- ->
     mudar linha de lugar                    alt <- ->
-    varios mouses                           alt clique
+    varios mouses                           ctrl clique
     varios mouses c teclado                 ctrl shift
     sair dos varios mouses                  esc
     criar nova linha e ir p/ ela            ctrl enter
