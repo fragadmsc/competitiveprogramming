@@ -1,10 +1,9 @@
 //#undef FRAGA
 
-#include <bits/stdc++.h>
+#include "algorithms/common.hpp"
 #include "algorithms/geometry/geometry.cpp"     
-#include "algorithms/common.hpp"     
+#include "algorithms/mathematics/modular_arithmetic.hpp"
 
-    
 #ifndef FRAGA
     const long long MAXN = 2*1e5+10;// 1e4*15+200;
 #else
@@ -17,10 +16,7 @@ const long long MOD = 998244353;
 
 
 void tc() {
-    ll n;
-    point p;
-    cin>>p.x;
-    cout<<2*p.x<<endl;
+    
 }
     
 int main() {
@@ -30,8 +26,7 @@ int main() {
         auto start = chrono::high_resolution_clock::now();
     #endif
 
-    ll t;
-    cin>>t;
+    ll t; cin>>t;
     while(t--) {
         tc();
     }
