@@ -1,4 +1,4 @@
-//#include "algorithms/common.hpp"
+#pragma once
 
 template<int MOD>
 struct ModInt {
