@@ -2,7 +2,8 @@
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>    
+#include <ext/pb_ds/tree_policy.hpp> 
+#include "algorithms/geometry/geometry.cpp"     
 using namespace std;
 using namespace __gnu_pbds;
     
@@ -14,7 +15,6 @@ typedef pair<ll, pii> pip;
 typedef vector<ll> vl;
 typedef long double ld;
 typedef priority_queue<int, vector<int>, greater<int>>  minqueue;//priority queue com menor no topo 
-typedef complex<ll> point;
     
 typedef tree<
 pii, 
@@ -60,8 +60,9 @@ void setIO(string s) {
 
 void tc() {
     ll n;
-    cin>>n;
-    cout<<2*n<<endl;
+    point p;
+    cin>>p.x;
+    cout<<2*p.x<<endl;
 }
     
 int main() {
