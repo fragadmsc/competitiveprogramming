@@ -1,3 +1,7 @@
+basics
+    build, compile and run                  ctrls shift b
+    debug                                   f5 
+
 snippets
     incluir ModInt                          !incmod
     

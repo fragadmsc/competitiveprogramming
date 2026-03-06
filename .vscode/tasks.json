@@ -18,7 +18,12 @@
                 "${workspaceFolder}/expander.py",
                 "${file}",
                 "&&",
-                "${fileDirname}/etc/${fileBasenameNoExtension}"
+                "timeout",
+                "3s",
+                "${fileDirname}/etc/${fileBasenameNoExtension}",
+                "&&",
+                "cat",
+                "${fileDirname}/etc/teste.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
