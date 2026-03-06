@@ -1,5 +1,6 @@
 #pragma once
-#include "algorithms/common.hpp"
+#include "vector"
+#include "cassert"
 
 
 template<typename T, typename Op>

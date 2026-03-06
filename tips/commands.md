@@ -7,6 +7,7 @@ snippets
     incluir Z-array                         !inczarray
     incluir LIS                             !inclis
     incluir Sparse Table                    !incsptable
+    incluir Fenqick Tree (BIT)              !incbit
 
 agilizar escrita
     scroll                                  ctrl <- ->
