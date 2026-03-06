@@ -4,7 +4,9 @@ basics
 
 snippets
     incluir ModInt                          !incmod
-    
+    incluir Z-array                         !inczarray
+    incluir LIS                             !inclis
+    incluir Sparse Table                    !incsptable
 
 agilizar escrita
     scroll                                  ctrl <- ->
