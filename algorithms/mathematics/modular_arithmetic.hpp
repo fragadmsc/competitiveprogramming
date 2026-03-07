@@ -27,6 +27,30 @@ struct ModInt {
     ModInt& operator-=(const ModInt& o) { v = (v - o.v + MOD) % MOD; return *this; }
     ModInt& operator*=(const ModInt& o) { v = (v * o.v) % MOD; return *this; }
     ModInt& operator/=(const ModInt& o) { return *this = *this/o; }
+    ModInt& operator++() {
+        v++;
+        if (v == MOD) v = 0;
+        return *this;
+    }
+    ModInt operator++(int) {
+        ModInt temp = *this;
+        ++(*this); 
+        return temp;
+    }
+    ModInt& operator--() {
+        if (v == 0) v = MOD;
+        v--;
+        return *this;
+    }
+    ModInt operator--(int) {
+        ModInt temp = *this;
+        --(*this);
+        return temp;
+    }
+
+
+    explicit operator long long() const { return v; }
+    explicit operator int() const { return static_cast<int>(v); }
 
     friend istream& operator>>(istream& is, ModInt& m) {
         long long x;
@@ -34,7 +58,6 @@ struct ModInt {
         m = ModInt(x); 
         return is;
     }
-
     friend ostream& operator<<(ostream& os, const ModInt& m) {
         return os << m.v;
     }
