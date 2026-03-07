@@ -2,7 +2,7 @@
 #include <vector>
 #include <cassert>
 
-template<typename T, typename Op, typename Opinv>
+template<typename T, typename Op = std::plus<T>, typename Opinv = std::minus<T>>
 struct BIT {
     int N;
     vector<T> vBIT; //vBIT[i] stores the range [i-lsb(i+1), i];
