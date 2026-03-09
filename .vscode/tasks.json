@@ -19,11 +19,8 @@
                 "${file}",
                 "&&",
                 "timeout",
-                "3s",
-                "${fileDirname}/etc/${fileBasenameNoExtension}",
-                "&&",
-                "cat",
-                "${fileDirname}/etc/teste.out"
+                "80s",
+                "${fileDirname}/etc/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"

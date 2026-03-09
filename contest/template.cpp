@@ -1,8 +1,7 @@
 //#undef FRAGA
 
 #include "algorithms/common.hpp"
-#include "algorithms/geometry/geometry.cpp"     
-#include "algorithms/mathematics/modular_arithmetic.hpp"
+#include "algorithms/data-structures/sparse_table.hpp"
 
 #ifndef FRAGA
     const long long MAXN = 2*1e5+10;// 1e4*15+200;
@@ -16,7 +15,7 @@ const long long MOD = 998244353;
 
 
 void tc() {
-    int a;
+    
     
 }
     
