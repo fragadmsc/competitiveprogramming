@@ -9,6 +9,13 @@ snippets
     incluir Sparse Table                    !incsptable
     incluir Fenqick Tree (BIT)              !incbit
 
+own library functions
+    printds                                 prints a data structure
+    answer                                  answer YES or NO
+
+useful cpp functions
+    find_if 
+
 agilizar escrita
     scroll                                  ctrl <- ->
     selecionar varias linhas                shift <- ->
