@@ -5,5 +5,5 @@ This is my repository for competitive programming, hope you enjoy!
 
 The main library I usually use for codeforces, and I plan to create a simpler version to print to the ICPC phases sometime.
 
-Every data structure uses half open intervals, [l, r)
+Every data structure uses close intervals, [l, r]
 
