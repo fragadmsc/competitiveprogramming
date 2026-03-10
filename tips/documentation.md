@@ -1,0 +1,10 @@
+#### This is a docuemntation on how to use each function of the library
+
+It is not a complete documentation, its more for personal consult and fast lookup
+
+Segment tree:
+    Range Update Constructor:
+    SegTree(Iterator first, Iterator last, Node id_N, Merge merget, Lazy id_L, Apply applyt, AddLazy addLazyt)
+
+    Point Update Constructor:
+    SegTree(Iterator first, Iterator last, Node id_N, Merge merget)
