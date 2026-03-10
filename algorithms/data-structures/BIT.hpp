@@ -2,6 +2,8 @@
 #include <vector>
 #include <cassert>
 
+/*Op is the operation to merge nodes 
+Opinv is the operation to combine [0,l) and [0, r) queries into [l, r) queries*/
 template<typename T, typename Op = std::plus<T>, typename Opinv = std::minus<T>>
 struct BIT {
     int N;
@@ -9,6 +11,7 @@ struct BIT {
     Op op;
     Opinv opi;
 
+    /*builds a BIT from two iterators*/
     template<typename Iterator>
     BIT(Iterator first, Iterator last, Op opr  = Op(), Opinv opir = Opinv()) : N(last-first), vBIT(first, last), op(opr), opi(opir) {
         for(int i = 0; i < N; i++) {
@@ -59,8 +62,10 @@ struct SubFunctor {
     T operator()(const T& a, const T& b) const { return a - b; }
 };
 
+/*Builds a xor BIT using two iterators for a vector*/
 using BITXor = BIT<long long, XorFunctor<long long>, XorFunctor<long long>>;
 
+/*Builds a sum BIT using two iterators for a vector*/
 using BITSum = BIT<long long, SumFunctor<long long>, SubFunctor<long long>>;
 
 

@@ -32,6 +32,7 @@ const long long inf = 1e18 + 10;
 #define sz(x) (int)x.size()
 #define all(x) x.begin(), x.end()
     
+/*set the standard input and output files to be s.in and s.out, respectively*/
 void setIO(string s) {
     if (!freopen((s + ".in").c_str(), "r", stdin)) {
         cerr << "ERROR: Could not open input" << s << ".in" << "\n";
@@ -39,6 +40,24 @@ void setIO(string s) {
     if (!freopen((s + ".out").c_str(), "w", stdout)) {
         cerr << "ERROR: Could not open output " << s << ".out" << "\n";
     }
+}
+
+/*Answer YES if t is true and NO otherwise*/
+void answer(bool t) {
+    if(t) {
+        cout<<"YES"<<endl;
+    } else {
+        cout<<"NO"<<endl;
+    }
+}
+
+/*prints any iterable data structure and a newline at the end*/
+template<typename T>
+void printds(const T& ds) {
+    for(const auto& e : ds) {
+        cout<<e<<' ';
+    }
+    cout<<"\n";
 }
 
 #ifndef FRAGA
