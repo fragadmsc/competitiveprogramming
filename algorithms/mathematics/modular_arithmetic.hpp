@@ -21,6 +21,8 @@ struct ModInt {
     ModInt operator-(const ModInt& o) const { return ModInt(v - o.v); }
     ModInt operator*(const ModInt& o) const { return ModInt(v * o.v); }
     ModInt operator/(const ModInt& o) const { return *this * o.inv(); }
+    bool operator ==(const ModInt& o) const { return v == o.v; }
+    bool operator !=(const ModInt& o) const { return v != o.v; }
     
 
     ModInt& operator+=(const ModInt& o) { v = (v + o.v) % MOD; return *this; }
