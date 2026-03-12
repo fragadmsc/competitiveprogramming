@@ -19,7 +19,7 @@ using minqueue = priority_queue<T, vector<T>, greater<T>>;//priority queue com m
 using ordered_set = tree<
 pii, 
 null_type, 
-less<pii>,
+less<ll>,
 rb_tree_tag, 
 tree_order_statistics_node_update
 >;
@@ -29,7 +29,7 @@ const long long inf = 1e18 + 10;
 #define f first
 #define s second
 #define KAMEKAMEHA ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define sz(x) (int)x.size()
+#define sz(x) (long long)x.size()
 #define all(x) x.begin(), x.end()
     
 /*set the standard input and output files to be s.in and s.out, respectively*/

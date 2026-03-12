@@ -65,3 +65,6 @@ struct ModInt {
     }
 
 };
+
+using m98 = ModInt<998244353>;
+using m10 = ModInt<(int)(1e9 + 7)>;
