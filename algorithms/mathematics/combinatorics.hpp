@@ -25,7 +25,8 @@ struct Z {
         return ModInt<MOD>(1)/_n;
     }
 
-    /*returns the nth catalan number*/
+    /*returns the nth catalan number
+    it will expand the factorial up to 2*n, if necessary*/
     ModInt<MOD> catalan(int _n) {
         if(2*_n > n) {
             fat.resize(2*_n + 1);
