@@ -1,12 +1,13 @@
-useful functions for competitive programming (here i didn't put the most obvious ones, as push_back() or max())
-       // are all of the elements positive?
-       all_of(first, first+n, ispositive()); 
+Useful functions for competitive programming (here i didn't put the most obvious ones, as push_back() or max())
 
-      // is there at least one positive element?
-      any_of(first, first+n, ispositive());
+Functions to make operations in arrays easier (can replace ispositive with a random lambda)
+      all_of(first, last, ispositive()); 
+      any_of(first, last, ispositive());
+      none_of(first, last, ispositive()); 
 
-      // are none of the elements positive?
-      none_of(first, first+n, ispositive()); 
-      (of course, this works also with isnegative)
+Printing decimals with arbitrary precision
+      cout<<fixed<<setprecision(n)<<i<<endl;
 
-cout<<fixed<<setprecision(n)<<i<<endl;
+Bit manipulation
+      __builtin_clz(x) (undefined behavior if x=0)
+      bit_width(x) the number of bits necessary to represent x (c++ 20)
