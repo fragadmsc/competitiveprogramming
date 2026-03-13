@@ -51,11 +51,19 @@ void answer(bool t) {
     }
 }
 
+/*an overload for std::cout*/
+template<typename T1, typename T2>
+std::ostream& operator<<(std::ostream& os, const std::pair<T1, T2>& p) {
+    os<<p.first<<' '<<p.second;
+
+    return os;
+}
+
 /*prints any iterable data structure and a newline at the end*/
 template<typename T>
-void printds(const T& ds) {
+void printds(const T& ds, char end = ' ') {
     for(const auto& e : ds) {
-        cout<<e<<' ';
+        cout<<e<<end;
     }
     cout<<"\n";
 }
