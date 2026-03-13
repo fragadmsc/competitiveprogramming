@@ -1,14 +1,16 @@
 #pragma once
+
 #include <vector>
 #include <cassert>
-
+#include <functional>
+#include <algorithm>
 
 template<typename T, typename Op>
 struct SparseTable{
     int N;
     Op op;
-    vector<int> log; //gets the log of a given value in O(1)
-    vector<vector<T>> table;
+    std::vector<int> log; //gets the log of a given value in O(1)
+    std::vector<std::vector<T>> table;
 
     template<typename Iterator>
     SparseTable(Iterator first, Iterator last, Op opr = Op()) : N(last-first), op(opr), log(N+1) {
@@ -26,6 +28,7 @@ struct SparseTable{
     }
 
     T query(int l, int r) const {
+        r++;
         assert(l < r && l >= 0 && r <= N && "invalid interval on sparse table");
         int dist = log[r - l];
         return op(table[dist][l], table[dist][r - (1<<dist)]);
