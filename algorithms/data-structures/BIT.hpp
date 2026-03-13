@@ -1,13 +1,14 @@
 #pragma once
 #include <vector>
 #include <cassert>
+#include <functional>
 
 /*Op is the operation to merge nodes 
-Opinv is the operation to combine [0,l) and [0, r) queries into [l, r) queries*/
+Opinv is the operation to combine [0,l] and [0, r] queries into [l, r] queries*/
 template<typename T, typename Op = std::plus<T>, typename Opinv = std::minus<T>>
 struct BIT {
     int N;
-    vector<T> vBIT; //vBIT[i] stores the range [i-lsb(i+1), i];
+    std::vector<T> vBIT; //vBIT[i] stores the range [i-lsb(i+1), i];
     Op op;
     Opinv opi;
 
@@ -24,6 +25,7 @@ struct BIT {
     }
 
     T query(int p) {
+        p++;
         T res = T();
         for(; p != 0; p -= (p&-p)) {
             res = op(res, vBIT[p-1]);
@@ -32,15 +34,16 @@ struct BIT {
     }
 
     T query(int l, int r) {
-        assert(l>=0 && r<=N && r>l && "Error in the BIT range query");
-        return opi(query(r), query(l));
+
+        assert(l >= 0 && r < N && r >= l && "Error in the BIT range query");
+        return opi(query(r), query(l-1));
     }
 
     void update(int p, T v) {
         //adds v to position p
         assert(p >= 0 && p < N && "Error in the BIT update range");
         p++;
-        for(; p < N; p += (p&-p)) {
+        for(; p <= N; p += (p&-p)) {
             vBIT[p-1] = op(vBIT[p-1], v);
         }
     }
