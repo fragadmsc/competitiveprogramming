@@ -1,23 +1,26 @@
-#include <vector>
 #pragma once
 
-template<typename T>
-std::vector<long long> zarray(const std::vector<T>& vt) {
-    int n = (int)size(vt);
-    std::vector<long long> z(n, 0);
-    int l, r;
+#include <vector>
 
-    for(int i=1; i<n; i++) {
-        if(i+z[i-l]<r) {
-            z[i] = z[i-l];
-        } else {
-            z[i] = max(0LL, r-i+1);
+/*returns the zarray*/
+template<typename T>
+std::vector<int> zarray(const std::vector<T>& vt) {
+    int n = (int)size(vt);
+    std::vector<int> z(n, 0);
+    int l = 0, r = 0;
+
+    for(int i = 1; i < n; i++) {
+        /*r is an inclusive boundary*/
+        if (i <= r) {
+            z[i] = std::min(r-i+1, z[i-l]);
         }
-        while(i+z[i]<n && vt[i+z[i]]==vt[z[i]]) {
+
+        while(i+z[i] < n && vt[i+z[i]] == vt[z[i]]) {
             z[i]++;
         }
-        if(i+z[i]>r) {
-            i+z[i] = r;
+        
+        if(i+z[i]-1 > r) {
+            r = i+z[i]-1;
             l = i;
         }
     }
