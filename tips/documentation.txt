@@ -1,4 +1,4 @@
-#### This is a docuemntation on how to use each function of the library
+This is a documentation on how to use each function of the library
 
 It is not a complete documentation, its more for personal consult and fast lookup
 
