@@ -8,3 +8,5 @@ useful functions for competitive programming (here i didn't put the most obvious
       // are none of the elements positive?
       none_of(first, first+n, ispositive()); 
       (of course, this works also with isnegative)
+
+cout<<fixed<<setprecision(n)<<i<<endl;

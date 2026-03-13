@@ -16,6 +16,7 @@ own library functions
 
 useful cpp functions
     find_if 
+    next_permutation
 
 agilizar escrita
     scroll                                  ctrl <- ->
@@ -32,8 +33,8 @@ agilizar escrita
 mudanca de arquivos
     olhar arquivos de in/out                ctrl p
     fechar arquivo                          ctrl w
-    run file                                ctrl r f
-    debug file                              crtl r d
+    run file                                ctrl shift b
+    debug file                              f5
     
 misc
     mudar entre janelas                       alt tab

@@ -1,11 +1,22 @@
-This file contains useful tips for competitive programming
+Tips for solving a problem
 
-ALWAYS declare a matrix with the lower bound before, example: mat[40][100] is better than mat[100][40]
+Ideas:
+    1. Try to make observations and simplify the problem
+    2. Can it be modeled as a graph?
+    3. Can it be solved using DP?
+        3.1. Bitmask DP
+        3.2. Interval DP
+        3.3. Tree DP
+        3.4. DP with prefix/suffix optimization
+    4. Can it be solved using a standard algorithm?
+    5. Can you use greedy?
+    6. Back to 1.
 
-ALWAYS remember to use long long or long double, except in cases where you are already consuming a lot of space and the limits fit ina normal int
+WA:
+    1. Verify the logic, if you're not sure about it
+    2. Verify all the small mistakes (in the entire code, it may have more than one typo)
+        2.1. Missing return statements or endl on special cases
+        2.2. i instead of j
+    3. Verify small cases
 
-In problems that ask you to output a float, output with the precision asked for the problem or more, using cout<<fixed<<setprecision(x)<<float;
 
-to compute a division MOD, con't make (n/y)%MOD, make (n*(MOD+x)/y)%MOD, this ensures that you are dividing the whole value, and not just the modulos by two, x is y - mod%y
-
-Constant time optimization: use global variables and static alocated memory if possible
