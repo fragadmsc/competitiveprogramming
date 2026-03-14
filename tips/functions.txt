@@ -11,3 +11,6 @@ Printing decimals with arbitrary precision
 Bit manipulation
       __builtin_clz(x) (undefined behavior if x=0)
       bit_width(x) the number of bits necessary to represent x (c++ 20)
+
+Randomize functions
+      shuffle(first, last, rng) (use the rng defined in the random.hpp)
