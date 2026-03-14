@@ -19,4 +19,7 @@ WA:
         2.2. i instead of j
     3. Verify small cases
 
+Contest tips:
+    1. Don't try to "hope code" a problem, this is, build a frankstein code that you spent like 5 seconds trying to prove it was right and 30min writing it, and then you submit with the hope that it works and spend the rest of the contest trying to fix it, while getting many WAs.
+
 
