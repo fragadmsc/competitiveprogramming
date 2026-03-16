@@ -6,11 +6,16 @@
 using namespace std;
 using namespace __gnu_pbds;
     
+using pii = pair<int, int>;
+using ppi = pair<pii, int>;
+using pip = pair<int, pii>;
+
 using ll = long long;
-using pii = pair<ll, ll>;
-using ppi = pair<pii, ll>;
-using pip = pair<ll, pii>;
+using pll = pair<ll, ll>;
+using ppl = pair<pll, ll>;
+using plp = pair<ll, pll>;
 using vl = vector<ll>;
+
 using ld = long double;
 
 template<typename T>
