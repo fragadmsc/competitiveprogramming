@@ -1,0 +1,5 @@
+tips to avoid MLE
+
+Vector resizing
+    - std vectors can take up to twice the space if they are build using pushback. to avoid this, use shrink to fit.
+
