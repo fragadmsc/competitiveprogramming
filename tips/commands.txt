@@ -31,6 +31,7 @@ agilizar escrita
     select line                             ctrl l
 
 mudanca de arquivos
+    show/hide lateral explorer              ctrl \
     olhar arquivos de in/out                ctrl p
     fechar arquivo                          ctrl w
     run file                                ctrl shift b

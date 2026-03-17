@@ -36,7 +36,8 @@ const long long inf = 1e18 + 10;
 #define KAMEKAMEHA ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define sz(x) (long long)x.size()
 #define all(x) x.begin(), x.end()
-    
+#define rall(x) x.rbegin(), a.rend();
+
 /*set the standard input and output files to be s.in and s.out, respectively*/
 void setIO(string s) {
     if (!freopen((s + ".in").c_str(), "r", stdin)) {
