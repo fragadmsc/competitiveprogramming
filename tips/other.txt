@@ -13,6 +13,8 @@ Ideas:
     6. Can you use greedy?
     7. Back to 1.
 
+    *if the idea is too hard to implement (like a dp with a lot of edge cases), maybe you are on the wrong path
+
 WA:
     1. Verify the logic, if you're not sure about it
     2. Verify all the small mistakes (in the entire code, it may have more than one typo)
