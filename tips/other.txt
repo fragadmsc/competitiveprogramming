@@ -8,9 +8,10 @@ Ideas:
         3.2. Interval DP
         3.3. Tree DP
         3.4. DP with prefix/suffix optimization
-    4. Can it be solved using a standard algorithm?
-    5. Can you use greedy?
-    6. Back to 1.
+    4. Can it be solved with binary search?
+    5. Can it be solved using a standard algorithm?
+    6. Can you use greedy?
+    7. Back to 1.
 
 WA:
     1. Verify the logic, if you're not sure about it
