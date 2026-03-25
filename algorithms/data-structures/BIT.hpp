@@ -15,12 +15,13 @@ struct BIT {
 
     /*builds a BIT from two iterators*/
     template<typename Iterator>
-    BIT(Iterator first, Iterator last, Op opr  = Op(), Opinv opir = Opinv()) : N(last-first), vBIT(first, last), op(opr), opi(opir) {
-        for(int i = 0; i < N; i++) {
-            int x = i+1;
-
-            for(int j = x - (x&-x); j < x-1; j++) {
-                vBIT[i] = op(vBIT[i], first[j]);
+    BIT(Iterator first, Iterator last, bool build = true, Op opr  = Op(), Opinv opir = Opinv()) : N(last-first), vBIT(first, last), op(opr), opi(opir) {
+        if(build) {
+            for(int i = 0; i < N; i++) {
+                int x = i+1;
+                for(int j = x - (x&-x); j < x-1; j++) {
+                    vBIT[i] = op(vBIT[i], first[j]);
+                }
             }
         }
     }
@@ -40,8 +41,8 @@ struct BIT {
         return opi(query(r), query(l-1));
     }
 
+    /*adds v to position p*/
     void update(int p, T v) {
-        //adds v to position p
         assert(p >= 0 && p < N && "Error in the BIT update range");
         p++;
         for(; p <= N; p += (p&-p)) {
