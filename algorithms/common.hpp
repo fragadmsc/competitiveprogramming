@@ -74,6 +74,17 @@ void printds(const T& ds, char end = ' ') {
     cout<<"\n";
 }
 
+/*auto explanatory*/
+constexpr unsigned int ceil_log2i(unsigned int n) {
+    if (n <= 1) return 0;
+    return 32 - __builtin_clz(n - 1);
+}
+
+constexpr unsigned long long ceil_log2(unsigned long long n) {
+    if (n <= 1) return 0;
+    return 64 - __builtin_clzll(n - 1);
+}
+
 #ifndef FRAGA
 #pragma GCC optimize("O3", "unroll-loops")
 #pragma GCC target("avx2", "bmi", "bmi2", "lzcnt", "popcnt")
