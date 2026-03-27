@@ -26,7 +26,7 @@ int main() {
         auto start = chrono::high_resolution_clock::now();
     #endif
 
-    ll t; cin>>t;
+    ll t=1; cin>>t;
     while(t--) {
         tc();
     }

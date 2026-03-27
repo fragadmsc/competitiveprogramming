@@ -8,3 +8,32 @@ Segment tree:
 
     Point Update Constructor:
     SegTree(Iterator first, Iterator last, Node id_N, Merge merget)
+
+    an example of a range add, (min, qtmin) query:
+    
+    auto merge = [](pll a, pll b) -> pll {
+        if(a.f==b.f) {
+            return {a.f, b.s+a.s};
+        }
+        return min(a, b);
+    };
+
+    auto apply = [](pll a, ll b, ll l, ll r) -> pll {
+        return {a.f+b, a.s};
+    };
+
+    auto addLazy = [](ll a, ll b) -> ll {
+        return a+b;
+    };
+
+    pll idn = {inf, 0};
+    ll idl = 0;
+    vector<vl> vt(n+1);
+    SegTree seg(
+        all(vt),
+        idn,  
+        merge, 
+        idl,
+        apply, 
+        addLazy
+    );
